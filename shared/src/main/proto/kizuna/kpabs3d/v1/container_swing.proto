@@ -1,0 +1,20 @@
+syntax = "proto3";
+
+package kizuna.kpabs3d.v1;
+
+option java_package = "dev.kizuna.kpabs3d.protocol.pb";
+option java_outer_classname = "ContainerSwingProtocol";
+
+// 客户端连接后先发送版本握手，服务端再下发当前摆动策略。
+message Hello {
+  uint32 protocol_version = 1;
+}
+
+message State {
+  uint32 protocol_version = 1;
+  bool enabled = 2;
+  float amplitude_degrees = 3;
+  float frequency_hz = 4;
+  float damping = 5;
+  uint64 revision = 6;
+}

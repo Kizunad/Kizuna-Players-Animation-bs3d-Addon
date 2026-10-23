@@ -1,0 +1,10 @@
+.gradle/
+**/.gradle/
+build/
+**/build/
+client/build/
+server/build/
+run/
+client/run/
+server/run/
+*.class

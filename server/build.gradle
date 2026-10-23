@@ -1,0 +1,14 @@
+dependencies {
+    modImplementation files(rootProject.frameworkServerJar)
+    modImplementation files(rootProject.kpaJar)
+    modImplementation files(rootProject.bs3dServerJar)
+}
+
+loom {
+    runs {
+        server {
+            runDir 'build/run'
+            programArg 'nogui'
+        }
+    }
+}

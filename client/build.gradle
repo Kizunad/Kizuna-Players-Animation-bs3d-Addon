@@ -1,0 +1,23 @@
+// 单机客户端包含同一份服务端入口；专用服务器使用 server 子项目产物。
+sourceSets.main.java.srcDir rootProject.file('server/src/main/java')
+
+dependencies {
+    modImplementation files(rootProject.frameworkJar)
+    // BS3D 客户端模组依赖其共享服务端模组；单机运行时两端都要进入开发装配。
+    modImplementation files(rootProject.frameworkServerJar)
+    modImplementation files(rootProject.kpaJar)
+    modImplementation files(rootProject.bs3dClientJar)
+    modImplementation files(rootProject.bs3dServerJar)
+    modImplementation 'io.wispforest:owo-lib:0.11.2+1.20'
+    // 本地开发直接加载 BS3D 资源配置解析器；正式 BS3D JAR 自带相同嵌套依赖。
+    implementation 'org.tomlj:tomlj:1.1.1'
+    implementation 'org.antlr:antlr4-runtime:4.11.1'
+}
+
+loom {
+    runs {
+        client {
+            runDir 'build/run'
+        }
+    }
+}

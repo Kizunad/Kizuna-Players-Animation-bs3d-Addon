@@ -1,0 +1,27 @@
+{
+  "schemaVersion": 1,
+  "id": "kpa_bs3d_swing",
+  "version": "${version}",
+  "name": "KPA BS3D Swing Addon",
+  "description": "让 BS3D 容器跟随 Players-Animation 玩家骨骼和移动摆动",
+  "environment": "client",
+  "authors": ["Kizunad"],
+  "license": "MIT",
+  "custom": {
+    "bs3d:item_registries": ["bs3d/kpa_bs3d_swing/items.txtpb"]
+  },
+  "entrypoints": {
+    "main": ["dev.kizuna.kpabs3d.server.ContainerSwingServer"],
+    "client": ["dev.kizuna.kpabs3d.client.ContainerSwingClient"]
+  },
+  "mixins": ["kpa_bs3d_swing.mixins.json"],
+  "depends": {
+    "java": ">=17",
+    "minecraft": "1.20.1",
+    "fabricloader": ">=0.16.10",
+    "fabric-api": ">=0.92.3+1.20.1",
+    "backpack_storage_3d": "0.1.0-SNAPSHOT",
+    "backpack_storage_3d_client": "0.1.0-SNAPSHOT",
+    "kizuna_players_animation": "0.1.0-SNAPSHOT"
+  }
+}

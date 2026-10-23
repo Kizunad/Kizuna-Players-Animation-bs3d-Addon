@@ -1,0 +1,7 @@
+{
+  "required": true,
+  "package": "dev.kizuna.kpabs3d.client.mixin",
+  "compatibilityLevel": "JAVA_17",
+  "client": ["WorldEquipmentRendererMixin"],
+  "injectors": {"defaultRequire": 1}
+}

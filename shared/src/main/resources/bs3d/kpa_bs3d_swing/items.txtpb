@@ -1,0 +1,19 @@
+# 与 BS3D 的 ItemRegistrations 共享；客户端和服务端使用同一份 protobuf 清单。
+version: 1
+
+items {
+  id: "kpa_bs3d_swing:swing_pouch"
+  description_translation_key: "item.kpa_bs3d_swing.swing_pouch.description"
+  creative_tab: "minecraft:tools"
+  container {
+    title: "摆动容器"
+    model: "kpa_bs3d_swing:swing_pouch"
+    inside { width: 2 height: 2 depth: 2 }
+    outside { width: 2 height: 2 depth: 2 }
+    mounts: WAIST_RIGHT_FRONT
+    mounts: WAIST_LEFT_FRONT
+    mounts: WAIST_LEFT_BACK
+    mounts: WAIST_RIGHT_BACK
+    asset { file: "models/SwingPouch.bbmodel" }
+  }
+}

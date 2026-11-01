@@ -4,7 +4,6 @@ version: 1
 items {
   id: "kpa_bs3d_swing:swing_pouch"
   description_translation_key: "item.kpa_bs3d_swing.swing_pouch.description"
-  creative_tab: "minecraft:tools"
   container {
     title: "摆动容器"
     model: "kpa_bs3d_swing:swing_pouch"

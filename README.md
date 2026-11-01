@@ -30,7 +30,7 @@
 - `server/build/libs/kpa-bs3d-swing-addon-server-0.1.0-SNAPSHOT.jar`
 - `build/distributions/kpa-bs3d-swing-addon-0.1.0-SNAPSHOT-proto.zip`
 
-客户端和专用服务器必须使用同一版本的物品清单。进入创造模式工具栏后可取得“摆动容器”，在 BS3D 工作台中拖到玩家腰部即可装备；F5 或附近玩家都能看到挂点和摆动。BS3D 自带草包、背篓及 Bong 的九种装备也沿用各自的腰部／胸部挂点进入同一摆动路径。
+客户端和专用服务器必须使用同一版本的物品清单。在创造模式“背包与收纳”物品栏（BS3D 的 `bs3d:containers`，清单省略 `creative_tab` 即归入）可取得“摆动容器”，在 BS3D 工作台中拖到玩家腰部即可装备；F5 或附近玩家都能看到挂点和摆动。BS3D 自带的九件 Bong 装备也沿用各自的腰部／胸部挂点进入同一摆动路径。
 
 ## 协议与边界
 

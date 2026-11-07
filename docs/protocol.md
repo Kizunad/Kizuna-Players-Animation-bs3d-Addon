@@ -24,3 +24,7 @@ Hello {
 网络载荷上限为 8 KiB。解析失败、未知字段、版本不匹配或数值越界时丢弃本次消息；客户端在收到合法服务端状态前保持禁用，不能自行改变服务端参数。
 
 容器本身通过 BS3D 的 `bs3d:item_registries` protobuf 清单注册。摆动渲染不复制 BS3D 的库存和装备状态：模型身份、挂点和维度外观仍由 BS3D 的权威 `EquipmentAppearance` 提供，附属只在 `WorldEquipmentRenderer` 的既有挂点调用处叠加 KPA 当前帧的骨骼增量。
+
+## 与即时搬运的关系
+
+本附属只叠加身体骨骼和移动惯性的容器摆动，不订阅 MOVE/Transfer，不读取 duration_ticks 或 elapsed_ticks，也不播放搬运伸手动画。BS3D v7 去掉转移计时不会改变本附属协议或摆动参数；无需新增固定动画或等待服务端回执。
